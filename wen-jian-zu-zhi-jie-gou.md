@@ -30,9 +30,27 @@ thousand-and-one-scripts.js
 my-file.min.css
 ```
 
-### 协议 {#协议}
+### 图片规范：
 
-不要指定引入资源所带的具体协议。
+命名应用
+
+```
+header_btn.gif
+header_btn2.gif
+```
+
+
+
+> 页面元素类图片均放入`img`文件夹,测试用图片放于`img/testimg`文件夹，psd源图放入`img/psdimg`文件夹。
+>
+> 图片格式仅限于`gif`、`png`、`jpg`等。
+
+> * 用`png`图片做图片时, 要求图片格式为`png-8`格式
+> * 背景图片请尽可能使用`sprite`技术, 减小`http`请求。
+
+
+
+### 不要指定引入资源所带的具体协议。
 
 当引入图片或其他媒体文件，还有样式和脚本时，URLs 所指向的具体路径，不要指定协议部分（`http:`,`https:`），除非这两者协议都不可用。
 
@@ -78,19 +96,18 @@ my-file.min.css
 
 ```
 var offset = 0;
- 
+
 if(includeLabels) {
   // Add offset of 20
   offset = 20;
 }
-
 ```
 
 **推荐**
 
 ```
 var offset = 0;
- 
+
 if(includeLabels) {
   // If the labels are included we need to have a minimum offset of 20 pixels
   // We need to set it explicitly because of the following bug: http://somebrowservendor.com/issue-tracker/ISSUE-1
@@ -107,8 +124,6 @@ if(includeLabels) {
 [YUIDoc](http://yui.github.io/yuidoc/)
 
 就是用来写 JavaScript 注释用的。你甚至可以使用工具来为这些注释生成文档，这也是激励开发者们写注释的一个好方法，因为一旦有了这样方便的生成文档的工具，他们通常会开始花更多时间在注释细节上。
-
-
 
 ### 代码检查 {#代码检查}
 
