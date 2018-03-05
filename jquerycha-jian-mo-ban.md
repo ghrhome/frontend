@@ -1,4 +1,4 @@
-# js模块化
+# jQuery插件模版
 
 ```
 (function (factory) {

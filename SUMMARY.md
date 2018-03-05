@@ -10,4 +10,5 @@
 * css编码规范
 * [js模块化](jsmo-kuai-hua.md)
 * css编码规范
+* [jquery插件模版](jquerycha-jian-mo-ban.md)
 
