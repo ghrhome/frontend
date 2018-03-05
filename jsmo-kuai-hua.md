@@ -35,7 +35,7 @@ var module1 = ( function (mod){
 　　})(window.module1 || {});
 
     return module1;
-    
+
 })
 ```
 
