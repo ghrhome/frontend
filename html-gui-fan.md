@@ -8,8 +8,6 @@
 
 HTML 中最好不要将无内容元素\[1\]的标签闭合，例如：使用`<br>`而非`<br />`.
 
-
-
 ### HTML 验证 {#html-验证}
 
 一般情况下，建议使用能通过标准规范验证的 HTML 代码，除非在性能优化和控制文件大小上不得不做出让步。
@@ -40,8 +38,6 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
 
 省略一些可选的标签确实使得页面大小减少，这很有用，尤其是对于一些大型网站来说。为了达到这一目的，我们可以在开发后期对页面进行压缩处理，在这个环节中这些可选的标签完全就可以省略掉了。
 
-
-
 ### 脚本加载 {#脚本加载}
 
 出于性能考虑，脚本异步加载很关键。一段脚本放置在`<head>`内，比如`<script src="main.js"></script>`，其加载会一直阻塞 DOM 解析，直至它完全地加载和执行完毕。这会造成页面显示的延迟。特别是一些重量级的脚本，对用户体验来说那真是一个巨大的影响。
@@ -54,7 +50,6 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
 
 脚本引用写在 body 结束标签之前，并带上 async 属性。这虽然在老旧浏览器中不会异步加载脚本，但它只阻塞了 body 结束标签之前的 DOM 解析，这就大大降低了其阻塞影响。而在现代浏览器中，脚本将在 DOM 解析器发现 body 尾部的 script 标签才进行加载，此时加载属于异步加载，不会阻塞 CSSOM（但其执行仍发生在 CSSOM 之后）。
 
-  
 **所有浏览器中，推荐**
 
 ```
@@ -64,7 +59,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
   </head>
   <body>
     <!-- body goes here -->
- 
+
     <script src="main.js" async></script>
   </body>
 </html>
@@ -101,7 +96,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
   <div class="nav-item"><a href="#news">News</a></div>
   <div class="nav-item"><a href="#about">About</a></div>
 </div>
- 
+
 <div class="news-page">
   <div class="page-section news">
     <div class="title">All news articles</div>
@@ -114,13 +109,13 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
         This article was created by David <div class="time">2014-01-01 00:00</div>
       </div>
     </div>
- 
+
     <div class="section-footer">
       Related sections: Events, Public holidays
     </div>
   </div>
 </div>
- 
+
 <div class="page-footer">
   Copyright 2014
 </div>
@@ -134,7 +129,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
   <!-- As this title belongs to the page structure it's a heading and h1 should be used -->
   <h1>My page title</h1>
 </header>
- 
+
 <!-- All navigation should go into a nav element -->
 <nav class="top-navigation">
   <!-- A listing of elements should always go to UL (OL for ordered listings) -->
@@ -144,7 +139,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
     <li class="nav-item"><a href="#about">About</a></li>
   </ul>
 </nav>
- 
+
 <!-- The main part of the page should go into a main element (also use role="main" for accessibility) -->
 <main class="news-page" role="main">
   <!-- A section of a page should go into a section element. Divide a page into sections with semantic elements. -->
@@ -154,7 +149,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
       <!-- As a page section belongs to the page structure heading elements should be used (in this case h2) -->
       <h2 class="title">All news articles</h2>
     </header>
- 
+
     <!-- If a section / module can be seen as an article (news article, blog entry, products teaser, any other
      re-usable module / section that can occur multiple times on a page) a article element should be used -->
     <article class="news-article">
@@ -165,7 +160,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
         <!-- Small can optionally be used to reduce importance -->
         <small class="intro">Introduction sub-title</small>
       </header>
- 
+
       <!-- For the main content in a section or article there is no semantic element -->
       <div class="content">
         <p>This is a good example for HTML semantics</p>
@@ -181,14 +176,14 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
         <p>This article was created by David <time datetime="2014-01-01 00:00" class="time">1 month ago</time></p>
       </footer>
     </article>
- 
+
     <!-- In a section, footnotes or similar information can also go into a footer element -->
     <footer class="section-footer">
       <p>Related sections: Events, Public holidays</p>
     </footer>
   </section>
 </main>
- 
+
 <!-- Your page footer should go into a global footer element -->
 <footer class="page-footer">
   Copyright 2014
@@ -270,7 +265,6 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
   <div class="red">I'm important!</div>
 </body>
 </html>
-
 ```
 
 **推荐**
@@ -292,7 +286,7 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
   <!-- You wanted to make it red because it's important so then also name the class important and decide in the stylesheet
    what you want to do with it -->
   <div class="important">I'm important!</div>
- 
+
   <!-- Put all your scripts into files and concatinate them into a single one -->
   <script async src="main.js"></script>
 </body>
@@ -400,56 +394,120 @@ HTML 标签的目的，就是为了不断地展示内容信息。
 ```
 <link rel="stylesheet" href="main.css">
 <script src="main.js"></script>
+```
+
+### 可用性 {#可用性}
+
+如果 HTML5 语义化标签使用得当，许多可用性问题已经引刃而解。ARIA 规则在一些语义化的元素上可为其添上默认的可用性角色属性，使用得当的话已使网站的可用性大部分成立。假如你使用`nav`,`aside`,`main`,`footer`等元素，ARIA 规则会在其上应用一些关联的默认值。  
+更多细节可参考[ARIA specification](http://rawgit.com/w3c/aria-in-html/master/index.html#recommendations-table)
+
+另外一些角色属性则能够用来呈现更多可用性情景（i.e.`role="tab"`）。
+
+### Tab Index 在可用性上的运用 {#tab-index-在可用性上的运用}
+
+检查文档中的 tab 切换顺序并传值给元素上的 tabindex，这可以依据元素的重要性来重新排列其 tab 切换顺序。你可以设置`tabindex="-1"`在任何元素上来禁用其 tab 切换。
+
+当你在一个默认不可聚焦的元素上增加了功能，你应该总是为其加上`tabindex`属性使其变为可聚焦状态，而且这也会激活其 CSS 的伪类`:focus`。选择合适的`tabindex`值，或是直接使用`tabindex="0"`将元素们组织成同一 tab 顺序水平，并强制干预其自然阅读顺序。
+
+
+
+### 微格式在 SEO 和可用性上的运用 {#微格式在-seo-和可用性上的运用}
+
+如果 SEO 和可用性环境条件允许的话，建议考虑采用微格式。微格式是通过在元素标签上申明一系列特定数据来达成特定语义的方法。
+
+谷歌、微软和雅虎对如何使用这些额外的数据一定程度上的达成一致，如果正确的使用，这将给搜索引擎优化带来巨大的好处。
+
+你可以访问[schema.org](http://schema.org/)获得更多内容细节。
+
+看一个电影网站的简单例子：
+
+**不带微格式**
+
+```
+<div>
+ <h1>Avatar</h1>
+ <span>Director: James Cameron (born August 16, 1954)</span>
+ <span>Science fiction</span>
+ <a href="../movies/avatar-theatrical-trailer.html">Trailer</a>
+</div>
+```
+
+**带有微格式**
+
+```
+<div itemscope itemtype ="http://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <div itemprop="director" itemscope itemtype="http://schema.org/Person">
+  Director: <span itemprop="name">James Cameron</span> (born <span itemprop="birthDate">August 16, 1954)</span>
+  </div>
+  <span itemprop="genre">Science fiction</span>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
+</div>
+```
+
+### ID 和锚点 {#id-和锚点}
+
+通常一个比较好的做法是将页面内所有的头部标题元素都加上 ID. 这样做，页面 URL 的 hash 中带上对应的 ID 名称，即形成描点，方便跳转至对应元素所处位置。
+
+打个比方，当你在浏览器中输入 URL`http://your-site.com/about#best-practices`，浏览器将定位至以下 H3 上。
+
+```
+<h3 id="best-practices">Best practices</h3>
+```
+
+### 格式化规则 {#格式化规则}
+
+在每一个块状元素，列表元素和表格元素后，加上一新空白行，并对其子孙元素进行缩进。内联元素写在一行内，块状元素还有列表和表格要另起一行。
+
+（如果由于换行的空格引发了不可预计的问题，那将所有元素并入一行也是可以接受的，格式警告总好过错误警告）。
+
+**推荐**
+
+```
+<blockquote>
+  <p><em>Space</em>, the final frontier.</p>
+</blockquote>
+ 
+<ul>
+  <li>Moe</li>
+  <li>Larry</li>
+  <li>Curly</li>
+</ul>
+ 
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Income</th>
+      <th scope="col">Taxes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$ 5.00</td>
+      <td>$ 4.50</td>
+    </tr>
+  </tbody>
+</table>
 
 ```
 
+### HTML 引号 {#html-引号}
 
+使用双引号\(“”\) 而不是单引号\(”\) 。
 
+**不推荐**
 
+```
+<div class='news-article'></div>
 
+```
 
+**推荐**
 
+```
+<div class="news-article"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
