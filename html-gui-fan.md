@@ -1,5 +1,11 @@
 ## HTML 规范 {#html-规范}
 
+文件规范
+
+• 文件名用英文单词，多个单词用驼峰命名法。
+
+ • 一些浏览器会将含有这些词的作为广告拦截，文件命名、ID、CLASS等所有命名避免以上词汇。ad、ads、adv、banner、sponsor、gg、guangg、guanggao等。
+
 ### 文档类型 {#文档类型}
 
 推荐使用 HTML5 的文档类型申明：`<!DOCTYPE html>`.
@@ -80,6 +86,26 @@ HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说�
 ```
 
 ### 语义化 {#语义化}
+
+HTML属性顺序
+
+ HTML 属性应当按照以下给出的顺序依次排列，确保代码的易读性。 class, id, name data-\* src, for, type, href, value title, alt role, aria-\*. class 用于标识高度可复用组件，因此应该排在首位。id 用于标识具体组件，应当谨慎使用（例如，页面内的书签），因此排在第二位。 
+
+class 命名
+
+class 名称中只能出现小写字符和破折号（dashe）（不是下划线，也不是驼峰命名法）。
+
+破折号应当用于相关 class 的命名（类似于命名空间）（例如，.btn 和 .btn-danger）。 
+
+避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思。 class 名称应当尽可能短，并且意义明确。 使用有意义的名称。 
+
+使用有组织的或目的明确的名称，不要使用表现形式（presentational）的名称。 
+
+基于最近的父 class 或基本（base） class 作为新 class 的前缀。 
+
+使用 .js-\* class 来标识行为（与样式相对），并且不要将这些 class 包含到 CSS 文件中。 在为 Sass 和 Less 变量命名时也可以参考上面列出的各项规范。
+
+
 
 根据元素（有时被错误地称作“标签”）其被创造出来时的初始意义来使用它。打个比方，用 heading 元素来定义头部标题，p 元素来定义文字段落，用 a 元素来定义链接锚点，等等。
 
@@ -409,8 +435,6 @@ HTML 标签的目的，就是为了不断地展示内容信息。
 
 当你在一个默认不可聚焦的元素上增加了功能，你应该总是为其加上`tabindex`属性使其变为可聚焦状态，而且这也会激活其 CSS 的伪类`:focus`。选择合适的`tabindex`值，或是直接使用`tabindex="0"`将元素们组织成同一 tab 顺序水平，并强制干预其自然阅读顺序。
 
-
-
 ### 微格式在 SEO 和可用性上的运用 {#微格式在-seo-和可用性上的运用}
 
 如果 SEO 和可用性环境条件允许的话，建议考虑采用微格式。微格式是通过在元素标签上申明一系列特定数据来达成特定语义的方法。
@@ -467,13 +491,13 @@ HTML 标签的目的，就是为了不断地展示内容信息。
 <blockquote>
   <p><em>Space</em>, the final frontier.</p>
 </blockquote>
- 
+
 <ul>
   <li>Moe</li>
   <li>Larry</li>
   <li>Curly</li>
 </ul>
- 
+
 <table>
   <thead>
     <tr>
@@ -488,7 +512,6 @@ HTML 标签的目的，就是为了不断地展示内容信息。
     </tr>
   </tbody>
 </table>
-
 ```
 
 ### HTML 引号 {#html-引号}
@@ -499,14 +522,12 @@ HTML 标签的目的，就是为了不断地展示内容信息。
 
 ```
 <div class='news-article'></div>
-
 ```
 
 **推荐**
 
 ```
 <div class="news-article"></div>
-
 ```
 
 
