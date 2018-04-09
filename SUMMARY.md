@@ -11,4 +11,5 @@
 * [开发及测试约定](kai-fa-ji-ce-shi-yue-ding.md)
 * [js模块化](jsmo-kuai-hua.md)
 * [jQuery插件模版](jquerycha-jian-mo-ban.md)
+* [scp\_说明](scpshuo-ming.md)
 
