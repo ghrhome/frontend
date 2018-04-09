@@ -2,17 +2,21 @@ SCP\_说明
 
 各位，
 
-[https://svn.siticp.com/repos/scpg/](https://svn.siticp.com/repos/scpg/)资产管理服务平台/scp\_file/8.demo2project
+[https://svn.siticp.com/repos/scpg/](https://svn.siticp.com/repos/scpg/)资产管理服务平台/scp_file/8.demo2project_
 
-我会陆续把迁移的页面放进来，
+其中scp\__demo是业务页面，scp\_frame是新的外层框架_
+
+scp\_frame里面会涉及到路由的一些配置，我稍晚给大家统一讲一下。
+
+我们前端会陆续把迁移的页面放进来。
+
+
 
 这几天我会把这里面的内容做个工程化的整理，
 
 包括页面js用模块化写成代码范式。
 
 封装 日期组件，下拉，各种树组件， alert, confirm，缩略图浏览的封装。
-
-
 
 大家开发中遇到的这里面的组件可以先绕过去。
 
@@ -27,6 +31,4 @@ SCP\_说明
 ![](/assets/1523255033205.jpg)
 
 ![](/assets/1523256700571.jpg)
-
-
 
