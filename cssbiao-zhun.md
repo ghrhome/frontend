@@ -4,11 +4,11 @@
 
 | 前缀 | 代码要求 | 样例 | 注意 |
 | :--- | :--- | :--- | :--- |
-| amp | 以功能模块名称为class命名 | amp-datepicker，amp-menu-select，amp-list | 为统一，避免驼峰命名 |
-| amp | 以代码块为class命名以表示页面结构 | amp-page,amp-block,amp-section,amp-panel,amp-table | 代码块体现页面层进关系。例如：amp-page&gt;apm-block&gt;amp-section |
-| amp | ID命名规范 | id="amp-finacial-\*" | 页面ID在页面与amp-page同级，以标识页面为主要目的 |
-|  |  | id="amp-list-\*" | 需要时可以绑定id值具体代码块,尽量在样式中单独定义到页面css中，copy代码时去掉 |
-| amp | 基于最近的父 class 或基本（base） class 作为新 class 的前缀。 | class="amp-panel" class="amp-panel-title" | &lt;div class="amp-panel"&gt;&lt;h3 class="amp-panel-title"&gt;&lt;/h3&gt;&lt;/div&gt; |
+| ys | 以功能模块名称为class命名 | ys-datepicker，ys-menu-select，ys-list | 为统一，避免驼峰命名 |
+| ys | 以代码块为class命名以表示页面结构 | ys-page,ys-block,ys-section,ys-panel,ys-table | 代码块体现页面层进关系。例如：ys-page&gt;ys-block&gt;ys-section |
+| ys | ID命名规范 | id="ys-finacial-\*" | 页面ID在页面与ys-page同级，以标识页面为主要目的 |
+|  |  | id="ys-list-\*" | 需要时可以绑定id值具体代码块,尽量在样式中单独定义到页面css中，copy代码时去掉 |
+| ys | 基于最近的父 class 或基本（base） class 作为新 class 的前缀。 | class="ys-panel" class="ys-panel-title" | &lt;div class="ys-panel"&gt;&lt;h3 class="ys-panel-title"&gt;&lt;/h3&gt;&lt;/div&gt; |
 | js | 使用 .js-\* class 或者 \#js-\* id 来标识行为（与样式相对） | class="js-swiper" class="js-collapse" | 不要将这些 class 或者 ID 包含到 CSS 文件中 |
 
 ### HTML属性顺序
