@@ -1,6 +1,6 @@
 # SCP\_demo to project 说明
 
-各位，
+
 
 [https://svn.siticp.com/repos/scpg/](https://svn.siticp.com/repos/scpg/)资产管理服务平台/scp_file/8.demo2project_
 
