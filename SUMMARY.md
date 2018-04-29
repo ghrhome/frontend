@@ -13,4 +13,5 @@
 * [jQuery插件模版](jquerycha-jian-mo-ban.md)
 * [scp\_说明](scpshuo-ming.md)
 * [界面精致化](jie-mian-jing-zhi-hua.md)
+* [2018-04-29录入优化](2018-04-29lu-ru-you-hua.md)
 
